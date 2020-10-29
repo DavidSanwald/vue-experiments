@@ -10,6 +10,7 @@
   "dependencies": {
     "@tailwindcss/ui": "^0.6.2",
     "core-js": "^3.6.5",
+    "graphql": "^14.7.0",
     "tailwindcss": "^1.9.6",
     "villus": "^1.0.0-alpha.4",
     "vue": "^3.0.0"
