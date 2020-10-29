@@ -1,26 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <HypoForm msg="Welcome to Your Vue.js App" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HypoForm from "./components/HypoForm.vue";
+import { useClient } from "villus";
 
 export default {
-  name: 'App',
+  name: "App",
+  setup() {
+    useClient({
+      url: "https://hypofriend.tech/q/"
+    });
+  },
   components: {
-    HelloWorld
+    HypoForm
   }
-}
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
