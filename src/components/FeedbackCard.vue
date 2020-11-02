@@ -1,7 +1,7 @@
 <script>
 const FeedbackCard = props => {
   return (
-    <div class="bg-white overflow-hidden shadow rounded-lg">
+    <div class="bg-white  shadow rounded-lg">
       <div class="px-4 py-5 sm:p-6">
         <dl>
           <dt class="text-sm leading-5 font-medium text-gray-500 truncate">

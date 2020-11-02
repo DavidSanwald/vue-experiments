@@ -1,17 +1,13 @@
 <template>
   <div>
-    <FormLabel :label="label" />
-    <label
-      for="price"
-      class="block text-sm font-medium leading-5 text-gray-700 text-left"
-      >{{ label }}</label
-    >
+    <FormLabel :name="name" :label="label" />
     <div class="mt-1 relative rounded-md shadow-sm">
       <div
         class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
       ></div>
       <input
-        id="price"
+        :id="name"
+        :name="name"
         type="number"
         class="form-input block w-full pl-7 pr-12 sm:text-sm sm:leading-5"
         placeholder="0.00"
@@ -34,10 +30,13 @@
 </template>
 
 <script>
+import FormLabel from "./FormLabel";
 export default {
   name: "FormRangeInput",
+  components: { FormLabel },
   props: {
     label: String,
+    name: String,
     modelValue: String
   }
 };

@@ -2,7 +2,7 @@
 const FormLabel = props => {
   return (
     <label
-      for="price"
+      for={props.name}
       class="block text-sm font-medium leading-5 text-gray-700 text-left"
     >
       {props.label}
@@ -11,6 +11,10 @@ const FormLabel = props => {
 };
 
 FormLabel.props = {
+  name: {
+    type: String,
+    required: true
+  },
   label: {
     type: String,
     required: true

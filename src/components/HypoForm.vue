@@ -25,7 +25,7 @@
         />
         <FormCheckBox
           v-model.number="realEstateCommission"
-          label="Total Savings"
+          label="Real Estate Comission"
           class="mt-8"
           name="realestateCommission"
         />
