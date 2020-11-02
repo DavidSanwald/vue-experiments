@@ -1,10 +1,6 @@
 <template>
   <div>
-    <label
-      for="price"
-      class="block text-sm font-medium leading-5 text-gray-700 text-left"
-      >{{ label }}</label
-    >
+    <FormLabel :label="label" />
     <div class="mt-1 relative rounded-md shadow-sm">
       <div
         class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
@@ -34,8 +30,10 @@
 </template>
 
 <script>
+import FormLabel from "./FormLabel";
 export default {
   name: "FormInput",
+  components: { FormLabel },
   props: {
     label: String,
     modelValue: String

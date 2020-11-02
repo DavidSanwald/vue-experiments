@@ -1,10 +1,6 @@
 <template>
   <div class="max-w-lg">
-    <label
-      for="price"
-      class="block text-sm font-medium leading-5 text-gray-700 text-left"
-      >{{ label }}</label
-    >
+    <FormLabel :label="label" />
     <div class="relative flex items-start">
       <div class="flex items-center h-5">
         <input

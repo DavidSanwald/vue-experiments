@@ -1,5 +1,6 @@
 <template>
   <div>
+    <FormLabel :label="label" />
     <label
       for="price"
       class="block text-sm font-medium leading-5 text-gray-700 text-left"
