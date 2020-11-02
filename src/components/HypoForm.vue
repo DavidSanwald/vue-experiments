@@ -4,26 +4,30 @@
       Mortgage Calculator
     </div>
     <div class="px-4 py-5 sm:p-6">
-      <form class="flex flex-col" @submit="checkForm">
+      <form class="flex flex-col" @submit.prevent="checkForm">
         <p v-if="errors" class="text-red-700">{{ errors }}</p>
         <FormInput
           v-model.number="propertyPrice"
           label="Property Purchase Price"
+          name="purchasePrice"
         />
         <FormInput
           v-model.number="totalSavings"
           label="Total Savings"
           class="mt-8"
+          name="totalSavings"
         />
         <FormRangeInput
           v-model.number="annualRepaymentRate"
           label="Annual repayment rate (%)"
           class="mt-8"
+          name="annualRepayment"
         />
         <FormCheckBox
-          v-model.number="totalSavings"
+          v-model.number="realEstateCommission"
           label="Total Savings"
           class="mt-8"
+          name="realestateCommission"
         />
         <div class="mt-8">
           <button
@@ -64,6 +68,7 @@ export default {
   name: "HypoForm",
   methods: {
     checkForm: function(e) {
+      console.log(e);
       this.errors = null;
 
       if (
