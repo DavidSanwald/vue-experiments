@@ -99,11 +99,11 @@ export default {
     brokerCosts() {
       return brokerTax * this.propertyPrice;
     },
-    totalCost() {
+    totalCosts() {
       return this.notaryCosts + this.brokerCosts + this.stampDutyCosts;
     },
     rawLoanAmount() {
-      return this.totalCost - this.totalSavings + this.propertyPrice;
+      return this.totalCosts - this.totalSavings + this.propertyPrice;
     },
     loanToValue() {
       return this.rawLoanAmount / this.propertyPrice;
